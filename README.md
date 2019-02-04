@@ -8,3 +8,5 @@
 ## Deployment
 
 ## How to Contribute
+
+##COPYRIGHT Section
