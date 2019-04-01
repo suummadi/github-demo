@@ -1,0 +1,23 @@
+def workspace;
+node {
+    
+    stage('Checkout')
+    {
+        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'surya', url: 'https://github.com/suummadi/github-demo.git']]])
+        workspace = pwd()
+        
+    }
+    stage('static Analysis')
+    {
+        echo 'static analysis'
+    }
+    
+    stage('Build')
+    {
+        echo 'build'
+    }
+    stage('unit testing')
+    {
+        echo  'unit testing'
+    }
+}
